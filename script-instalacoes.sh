@@ -14,13 +14,13 @@ then
 fi
 echo "Atualização de pacotes feita com sucesso"
 
-echo "Removendo versões antigas já instaladas..."
+echo "Removendo aplicações e bibliotecas já instaladas..."
 if [ ! -z $(which -- docker) ]; then
-    sudo apt-get remove docker docker-engine docker.io
-fi 
+    sudo apt-get autoremove -y --purge docker
+fi
 
 echo "Baixando e instalando os recursos..."
-sudo apt-get install -y git npm python python-pip golang docker.io 
+sudo apt-get install -y git npm python python-pip golang docker.io
 sudo npm install -g npm n
 sudo -H python -m pip install --upgrade pip
 sudo systemctl start docker
