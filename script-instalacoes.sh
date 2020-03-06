@@ -29,5 +29,12 @@ printf "\n[http]
         sslVerify = false
         \n[user]
         name = Felipe Amaral
-        email=amaral.felipe@live.com" | tee -a $HOME/.gitconfig && \
+        email = amaral.felipe@live.com
+        signingkey = 43B8CCCF699517BD
+        \n[credential]
+        helper = store
+        \n[gpg]
+        program = gpg
+        \n[commit]
+        gpgsign = true" | tee -a $HOME/.gitconfig && \
 printf "\nexport GOPATH=\$(go env GOPATH)" | tee -a $HOME/.zshrc $HOME/.bashrc
