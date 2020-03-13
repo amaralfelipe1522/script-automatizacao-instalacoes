@@ -20,7 +20,7 @@ if [ ! -z $(which -- docker) ]; then
 fi
 
 echo "Baixando e instalando os recursos..."
-sudo apt-get install -y git npm python python-pip golang docker.io mysql-server
+sudo apt-get install -y git npm python python-pip golang docker.io mysql-server zsh
 sudo npm install -g npm n
 sudo -H python -m pip install --upgrade pip
 sudo systemctl start docker
