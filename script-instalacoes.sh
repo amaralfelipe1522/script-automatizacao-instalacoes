@@ -20,11 +20,12 @@ if [ ! -z $(which -- docker) ]; then
 fi
 
 echo "Baixando e instalando os recursos..."
-sudo apt-get install -y git npm python python-pip golang docker.io mysql-server zsh
-sudo npm install -g npm n
-sudo -H python -m pip install --upgrade pip
-sudo systemctl start docker
-sudo systemctl enable docker
+sudo apt-get install -y git npm python python-pip golang docker.io mysql-server curl zsh  && \
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  && \
+sudo npm install -g npm n  && \
+sudo -H python -m pip install --upgrade pip  && \
+sudo systemctl start docker  && \
+sudo systemctl enable docker  && \
 printf "\n[http]
         sslVerify = false
         \n[user]
