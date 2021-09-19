@@ -1,0 +1,8 @@
+[user]
+	name = Felipe Amaral
+	email = amaral.felipe@live.com
+	signingkey = 0B86A26AE688EC98
+[http "https://gitlab.prodesp.sp.gov.br"]
+    sslVerify = false
+[commit]
+	gpgsign = true
