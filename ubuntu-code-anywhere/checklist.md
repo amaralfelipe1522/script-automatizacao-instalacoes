@@ -114,7 +114,7 @@ apt install ./anydesk.deb -y
 ```
 ## Libreoffice
 ```
-snap install libreoffice -y
+sudo apt install libreoffice -y
 ```
 ## Obs Studio
 ```

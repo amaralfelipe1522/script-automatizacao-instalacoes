@@ -14,13 +14,12 @@ cat /etc/resolv.conf
 
 Verifica se já existe chave: ls -al ~/.ssh
 Configura email do Github: ssh-keygen -t rsa -b 4096 -C "amaral.felipe@live.com"
-Pega a chave SSH para colocar no Github: cat id_rsa.pub
+Pega a chave SSH para colocar no Github: cat ~/.ssh/id_rsa.pub
 
 # GPG (PGP)
 
-Instalar e se logar no Keybase
 Instalar GPG: sudo apt install gpg
-Gerar chave PGP: keybase pgp gen --multi
+Criar: gpg --full-gen-key
 Consultar seu código PGP: gpg --list-secret-keys --keyid-format LONG
 Exemplo:
 ## /Users/pstadler/.gnupg/secring.gpg
@@ -32,4 +31,4 @@ Exemplo:
 git config --global user.signingkey E870EE00
 git config --global commit.gpgsign true
 
-Exibir código PGP para colocar no Github: keybase pgp export -q E870EE00
+Exibir código PGP para colocar no Github: gpg --armor --export E870EE00
