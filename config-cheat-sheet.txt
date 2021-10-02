@@ -30,5 +30,30 @@ Exemplo:
 
 git config --global user.signingkey E870EE00
 git config --global commit.gpgsign true
+git config --global gpg.program gpg
+git log --show-signature -1
 
 Exibir código PGP para colocar no Github: gpg --armor --export E870EE00
+
+------------------
+
+if still getting gpg failed to sign the data fatal: failed to write commit object
+
+this is not issue with git ,this is with GPG follow below steps
+
+    gpg --version
+    echo "test" | gpg --clearsign
+
+if it is showing:
+
+gpg: signing failed: Inappropriate ioctl for device
+gpg: [stdin]: clear-sign failed: Inappropriate ioctl for device
+
+    then use export GPG_TTY=$(tty)
+
+    then again try echo "test" | gpg --clearsign in which PGP signature is got.
+
+    git config -l | grep gpg
+
+gpg.program=gpg
+commit.gpgsign=true
