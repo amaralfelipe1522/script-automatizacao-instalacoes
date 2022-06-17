@@ -130,3 +130,8 @@ apt install obs-studio -y
 ```
 apt install vlc -y
 ```
+## TMATE
+```
+sudo apt install tmate
+tmate -F -n web new-session vi console 
+```
