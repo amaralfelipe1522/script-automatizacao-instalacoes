@@ -16,13 +16,7 @@ apt-get install snapd -y
 ```
 apt-get install git-all -y
 ```
-## Terminator
-```
-apt-get install terminator -y
-```
-```
-update-alternatives --config x-terminal-emulator
-```
+
 ## Zsh
 ```
 apt-get install zsh -y
